@@ -7,7 +7,7 @@
 * Clojure is a functional language, and it's a lot of fun to write code in (according to copilot).
 
 #### What is *this*?
-* This project aims to create a web application with a Clojure backend, and a ClojureScript + Ember.JS frontend.
+* This project aims to create a web application with a Clojure backend, and a ClojureScript + Ember.JS frontend. There'll probably be a container running Tesseract too.
 
 #### You should be jailed
 * Yes, I know.

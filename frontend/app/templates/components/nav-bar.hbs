@@ -1,0 +1,35 @@
+<!--<nav class="menu">-->
+<!--  <LinkTo @route="dashboard" class="menu-index">-->
+<!--    <h1>Home</h1>-->
+<!--  </LinkTo>-->
+<!--  <div class="links">-->
+<!--    <LinkTo @route="about" class="menu-about">-->
+<!--      <h1>About</h1>-->
+<!--    </LinkTo>-->
+<!--    <LinkTo @route="contact" class="menu-contact">-->
+<!--      <h1>Contact</h1>-->
+<!--    </LinkTo>-->
+<!--  </div>-->
+<!--</nav>-->
+<nav {{did-insert this.handleDidInsert}}>
+  <ul class="menu">
+    <li class="logo"><a href="#">Clojurious</a></li>
+<!--    <li><a href="#">Home</a></li>-->
+    <NavBar::Item @name="Home" @link="dashboard.home" />
+<!--    <li><a href="#">About</a></li>-->
+    <NavBar::Item @name="About" @link="about" />
+<!--    <li class="item has-submenu">-->
+<!--      <a tabindex="0">Services</a>-->
+<!--      <ul class="submenu">-->
+<!--        <li class="subitem"><a href="#">Finding Sales</a></li>-->
+<!--        <li class="subitem"><a href="#">Finding COAs</a></li>-->
+<!--        <li class="subitem"><a href="#">Finding Your Medications</a></li>-->
+<!--      </ul>-->
+<!--    </li>-->
+    {{!-- <NavBar::SubMenu @subMenuName="Services" @subMenuItems="[{name: 'Finding Sales', link: 'dashboard.services.sales'}, {name: 'Finding COAs', link: 'dashboard.services.coas'}, {name: 'Finding Your Medications', link: 'dashboard.services.medications'}]"/> --}}
+    <NavBar::SubMenu @subMenuName="Services" @subMenuItems={{this.servicesItems}}/>
+    <li class="item button"><a href="#">Log In</a></li>
+    <li class="item button secondary"><a href="#">Sign Up</a></li>
+    <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+  </ul>
+</nav>

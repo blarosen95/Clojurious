@@ -1,0 +1,9 @@
+<li class="item has-submenu" {{did-insert this.handleDidInsert}}>
+  <a class="submenu-link" tabindex="0" {{on "click" this.toggle}}>{{~@subMenuName~}}</a>
+  <ul class="submenu {{if this.isOpen "submenu-active"}}">
+    {{#each @subMenuItems as |item|}}
+{{!--      {{> sub-menu-item}}--}}
+      <NavBar::Item @isSubItem={{true}} @name={{item.name}} @isOpen={{this.isOpen}} />
+    {{/each}}
+  </ul>
+</li>

@@ -1,0 +1,14 @@
+{{!--<li class="item {{if @hasSubMenu "has-submenu"}}">--}}
+ {{!-- <li class="{{unless @isSubItem "item" "subitem"}} {{if @isOpen "submenu-active"}}"> --}}
+<li class="{{unless @isSubItem "item" "subitem"}}">
+    {{#unless @link}}
+      <a href='#'>
+        {{@name}}
+      </a>
+    {{else}}
+      <LinkTo @route="{{@link}}">
+        {{@name}}
+      </LinkTo>
+    {{/unless}}
+  </li>
+{{!--</li>--}}
